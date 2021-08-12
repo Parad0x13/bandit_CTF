@@ -1,0 +1,18 @@
+function c { clear };
+function f { find ./ -name "*$1*" 2>/dev/null };
+function h { hexdump -C "$1" | less };
+function dush { du -sh };
+function unsetCustomFunctions { unset -f c dush f h listCustom unsetCustomFunctions };
+
+function listCustom {
+	print "\-\-== Custom functions have been created ==\-\-";
+	print "c = clear";
+	print "f = find ./ -name \"*$1*\" 2>/dev/null";
+	print "h = hexdump -C \"$1\" | less";
+	print "dush = du -sh";
+	print "listCustom = list all custom functions";
+	print "unsetCustomFunctions = removes all custom functions";
+};
+
+listCustom;
+

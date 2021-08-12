@@ -1,0 +1,7 @@
+There are '-'s before the filenames which makes a standard file * inquiry fail
+This is fixed by running file ./* instead, there exist 9 of them in total
+We see -file07 is the only ASCII document
+cat ./-file07 yields the password
+
+flag{koReBOKuIDDepwhWk7jZC0RTdopnAYKh}
+

@@ -1,0 +1,6 @@
+A bit harder this one, but not too bad
+The file was easily found with a quick search ls -laR $PWD/* | less then search for 1033 which gives /home/bandit5/inhere/maybehere07/.file2
+The file itself yields the password
+
+flag{DXjZPULLxYr17uwoI01bNLQbtFemEgo7}
+

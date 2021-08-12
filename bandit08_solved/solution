@@ -1,0 +1,6 @@
+Since we need to find the only unique value we need to use uniq
+However since uniq only merges adjacent lines we need to sort data.txt with sort
+This will do what we want: sort data.txt | uniq -u
+
+flag{UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR}
+

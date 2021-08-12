@@ -1,0 +1,5 @@
+There exists a sneaky file simply named '-' in this folder that you much read
+This can be done with cat ./- since cat - will not work
+
+flag{CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9}
+

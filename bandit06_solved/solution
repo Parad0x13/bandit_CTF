@@ -1,0 +1,6 @@
+The file requested can be found with the following search:
+find / -size 33c -group bandit6 -user bandit7 2>/dev/null
+	The 33c is 33 characters, just the byte size delimeter specific to the find command
+
+flag{HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs}
+
