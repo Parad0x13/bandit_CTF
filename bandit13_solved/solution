@@ -1,0 +1,9 @@
+This one is done a bit different than the rest
+We are provided with a private ssh key which we can use as the identity_file
+ssh -i sshkey_private bandit14@localhost
+
+This will log us directly into bandit14 and we can find the flag at /etc/bandit_pass/bandit14
+This file is only readable by bandit14 so we must be bandit14 first to read it
+
+flag{4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e}
+

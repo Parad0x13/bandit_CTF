@@ -1,0 +1,6 @@
+The solution for this can be found very easily in two different ways
+cat data.txt | grep --text =====
+strings data.txt | grep =====
+
+flag{truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk}
+

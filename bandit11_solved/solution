@@ -1,0 +1,5 @@
+This is a great use for translate(tr)
+cat data.txt | tr "A-Za-z" "N-ZA-Mn-za-m"
+
+flag{5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu}
+

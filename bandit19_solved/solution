@@ -1,0 +1,33 @@
+So this is an interesting use of the set user id (setuid) bit in the file's permissions
+
+If you ls -la on any file you'll notice that the permissions are broken into sections
+
+[d][USR][GRP][OTH]
+
+[d] Is the directory flag
+[USR] Is the user level permissions
+[GRP] Is the group level permissions
+[OTH] Is the other (aka world) level permissions
+
+Each of the three permission groups have the flags rwx for read, write, and execute
+
+These values can be modified directly via chmod, such as chmod g+x myFile which will allow said file to be executed by anyone belonging to the file's group. Etc...
+chmod -x myFile will remove execution permissions from all 3 level permissions for example
+
+In this situation with our binary on the target we have the special permissions:
+                user    group
+-rwsr-x---  1 bandit20 bandit19 7296 May  7  2020 bandit20-do
+This indicates that the file is not a directory, the user has a sticky bit on the execute flag, the group can execute, and the world has no permissions at all
+
+The sticky bit is interesting because it allows anyone in the file's group (in this case bandit19) to execute as if they belonged in the user's group (in this case bandit20)
+In otherwords anyone belonging in group bandit19 can execute this file as if they belonged in group bandit20 with all of bandit20's permissions
+
+Another great example of sticky bit utilization is the file /usr/bin/sudo
+
+Something to note is that if the sticky bit is a capital S this indicates that although the sticky bit is set the owner of the file does not have execute permissions themselves. Easily fixed with a chmod u+x from that user
+
+Knowing this we can use the bandit20-do file to read the next flag:
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+flag{GbKksEFF4yrVs6il55v6gwY5aVje5f0j}
+

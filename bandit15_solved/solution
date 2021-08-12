@@ -1,0 +1,5 @@
+openssl s_client -connect localhost:30001
+Then paste the flag for this level: BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+flag{cluFn7wTiGryunymYOu4RcffSxQluehd}
+

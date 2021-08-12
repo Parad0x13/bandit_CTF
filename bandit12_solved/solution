@@ -1,0 +1,24 @@
+cd `mktemp -d`
+cp ~/data.txt .
+
+It can be noted that the file is a hexdump of the actual file itself, and not a binary copy
+We fix this by converting the hexdump into a binary format
+xxd -r data.txt output.bin
+
+The file has been compressed several times
+mv data.bin data.gz
+gzip -d data.gz
+mv data data.bz2
+bzip2 -d data.bz2
+mv data data.gzip
+gzip -d data.gzip
+mv data data.tar
+tar -xvf data.tar
+rm data.tar
+tar -xvf data5.bin
+rm data5.bin
+tar -xvf data6.bin
+etc... Literally just keep going until you get to an ASCII file at the end
+
+flag{8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL}
+

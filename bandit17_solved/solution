@@ -1,0 +1,9 @@
+I had to chmod 600 id_rsa to coerce ssh into using the key. By default just writing the key to a file grants it too many permissions to outside users. This is an interesting security feature
+I also had to login a different way by passing the id_rsa private key through ssh
+
+Finding the only changed line between the two files here was super easy
+diff *
+The flag was the first line
+
+flag{kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd}
+

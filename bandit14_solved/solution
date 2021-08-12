@@ -1,0 +1,6 @@
+This was way too easy, all you need to do is send the cleartext flag for this level over to port 30000
+nc localhost 30000
+Then just paste 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+flag{BfMYroe26WYalil77FoDi9qh59eK5xNr}
+

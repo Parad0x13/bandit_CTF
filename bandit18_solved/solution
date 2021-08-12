@@ -1,0 +1,7 @@
+We are logged out directly after logging in, which is annoying. However we can use scp to send commands to execute on ssh access
+we can send ls directly after the login command to see what's there, then since we see readme we can cat that file out as a different command
+
+The actual solution is in login.sh
+
+flag{IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x}
+
